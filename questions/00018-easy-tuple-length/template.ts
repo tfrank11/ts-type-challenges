@@ -1,1 +1,1 @@
-type Length<T> = any
+type Length<T extends readonly any[]> = T extends { length: infer L } ? L : never
